@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Databases&amp;Coroutines</string>
+    <string name="name">Имя автора</string>
+    <string name="title">Название книги</string>
+    <string name="favorite_books">Favorite books</string>
+</resources>
