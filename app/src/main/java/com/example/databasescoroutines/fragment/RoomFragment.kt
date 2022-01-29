@@ -88,11 +88,6 @@ class RoomFragment : Fragment() {
             }
             val itemTouchHelper = ItemTouchHelper(swipeToDelete)
             itemTouchHelper.attachToRecyclerView(recyclerView)
-
-
-            //обновление данных через флоу либо через
-            //переделать все функции на асинхронщину
-            //связать все в мэйн активити
         }
     }
 
