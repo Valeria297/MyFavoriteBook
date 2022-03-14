@@ -1,4 +1,4 @@
-package com.example.databasescoroutines.fragment
+package com.example.databasescoroutines.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,10 +15,6 @@ class RegistrationFragment : Fragment() {
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = requireNotNull(_binding)
 
-    companion object {
-        const val COUNT_KEY = "COUNT_KEY"
-    }
-
     private var count = 0
 
     private val database: AppDatabase by lazy {
@@ -34,7 +30,6 @@ class RegistrationFragment : Fragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-
         outState.putInt(COUNT_KEY, count)
     }
 
@@ -53,17 +48,14 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        registration()
-    }
-
-    private fun registration() {
         with(binding) {
             addButton.setOnClickListener {
                 val authorName = authorName.text.toString().plus(" - ")
                 val bookTitle = bookTitle.text.toString()
 
-                database.roomBookDao().insertBooks(RoomBook(author = authorName,
-                    title = bookTitle))
+                database.roomBookDao().insertBooks(
+                    RoomBook(author = authorName, title = bookTitle)
+                )
             }
         }
     }
@@ -73,4 +65,7 @@ class RegistrationFragment : Fragment() {
         _binding = null
     }
 
+    companion object {
+        const val COUNT_KEY = "COUNT_KEY"
+    }
 }

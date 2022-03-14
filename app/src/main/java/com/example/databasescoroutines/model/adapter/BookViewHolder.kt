@@ -1,11 +1,11 @@
-package com.example.databasescoroutines.adapter
+package com.example.databasescoroutines.model.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.databasescoroutines.databinding.ItemModelBinding
 import com.example.databasescoroutines.model.RoomBook
 
 class BookViewHolder(
-    private val binding: ItemModelBinding
+    private val binding: ItemModelBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(book: RoomBook) {

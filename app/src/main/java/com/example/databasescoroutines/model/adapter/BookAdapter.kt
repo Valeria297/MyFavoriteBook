@@ -1,15 +1,14 @@
-package com.example.databasescoroutines.adapter
+package com.example.databasescoroutines.model.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.databasescoroutines.databinding.ItemModelBinding
 import com.example.databasescoroutines.model.RoomBook
 
-class BookAdapter(private val context: Context,
-                  private val booksList: MutableList<RoomBook>
-) : RecyclerView.Adapter<BookViewHolder>(){
+class BookAdapter(
+    val booksList: MutableList<RoomBook>,
+) : RecyclerView.Adapter<BookViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -25,7 +24,6 @@ class BookAdapter(private val context: Context,
     }
 
     override fun getItemCount(): Int {
-      return booksList.size
+        return booksList.size
     }
-
 }

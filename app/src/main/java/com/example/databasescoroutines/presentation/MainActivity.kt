@@ -1,4 +1,4 @@
-package com.example.databasescoroutines
+package com.example.databasescoroutines.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.databasescoroutines.fragment.RegistrationFragment
-import com.example.databasescoroutines.fragment.RoomFragment
+import com.example.databasescoroutines.R
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -40,7 +39,5 @@ class MainActivity : AppCompatActivity() {
                 RoomFragment()
             }
         }
-
     }
-
 }
