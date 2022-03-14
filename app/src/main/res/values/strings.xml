@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyFavoriteBook</string>
+    <string name="name">Имя автора</string>
+    <string name="title">Название книги</string>
+    <string name="favorite_books">Favorite books</string>
+    <string name="add">Add</string>
+</resources>
